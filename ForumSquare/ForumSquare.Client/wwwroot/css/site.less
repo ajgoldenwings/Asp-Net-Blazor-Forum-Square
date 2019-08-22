@@ -1,0 +1,247 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    height: 100%;
+}
+
+.alert {
+    margin-bottom: 0rem;
+}
+
+.content {
+    background-color: white;
+    height: ~"calc(100vh - 56px)";
+}
+
+.top-row {
+    background-color: rgba(0,0,0,0.4);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    flex: 1;
+
+    .top-row {
+        justify-content: flex-end;
+
+        a, .btn-link, .btn-link,
+        a:hover, .btn-link:hover, .btn-link:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .top-row > a {
+        margin-left: 1.5rem;
+    }
+}
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+
+    .top-row {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+}
+
+.nav-item {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav-item:first-of-type {
+    padding-top: 1rem;
+}
+
+.nav-item:last-of-type {
+    padding-bottom: 1rem;
+}
+
+.nav-item a {
+    color: #d7d7d7;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+}
+
+.nav-item a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
+
+.nav-item a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main {
+    .content.px-4 {
+        padding-left: 0px !important;
+    }
+
+    .content.px-4 {
+        padding-right: 0px !important;
+    }
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+
+@media (max-width: 767.98px) {
+    .main .top-row {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .main {
+        .top-row {
+            position: sticky;
+            top: 0;
+        }
+    }
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+
+
+
+
+.form-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.input_msg_write input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    color: #4c4c4c;
+    font-size: 15px;
+    min-height: 48px;
+    width: 100%;
+}
+
+.type_msg {
+    border-top: 1px solid #c4c4c4;
+    position: relative;
+}
+
+.msg_send_btn {
+    background: #05728f none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    top: 11px;
+    width: 33px;
+}
+
+
+/*
+    Chat CSS
+*/
+.chat {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px dotted #B3A9A9;
+    }
+
+    li .chat-body p {
+        margin: 0;
+        color: #777777;
+    }
+}
+
+.card {
+    height: 100%;
+    border: 0px;
+}
+
+.card .slidedown .glyphicon, .chat .glyphicon {
+    margin-right: 5px;
+}
+
+.card-body {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}

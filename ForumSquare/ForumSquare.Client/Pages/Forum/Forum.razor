@@ -1,0 +1,56 @@
+﻿@page "/forum"
+@inject IAuthorizationService AuthorizationService
+@inherits ForumPageModel
+@inject HttpClient Http
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div class="alert alert-success">
+            <a href="Login">Log in</a> to post a message.
+        </div>
+    </NotAuthorized>
+    <Authorized>
+        @* https://bootsnipp.com/snippets/9njj (Bootstrap 3) *@
+        <div class="card card-primary">
+            <div class="card-heading">
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div class="navbar-brand">Forum</div>
+                </nav>
+            </div>
+            <div class="card-body">
+                <ul class="chat">
+                    @if (Messages == null)
+                    {
+                        <li class="left clearfix">
+                            <div class="chat-body clearfix">
+                                <p>
+                                    Loading messages..
+                                </p>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        @foreach (var message in Messages)
+                        {
+                            <li class="left clearfix">
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">Anonymous</strong> <small class="pull-right text-muted">
+                                            <span class="glyphicon glyphicon-time"></span>Unknown mins ago
+                                        </small>
+                                    </div>
+                                    <p>
+                                        @message.Text
+                                    </p>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+
+            <ForumMessageCreateForm OnMessageCreate="OnMessageCreate" />
+        </div>
+    </Authorized>
+</AuthorizeView>

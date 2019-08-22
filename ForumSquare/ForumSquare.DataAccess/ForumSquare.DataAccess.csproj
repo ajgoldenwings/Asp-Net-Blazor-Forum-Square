@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0-preview8.19405.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0-preview8.19405.11" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0-preview8.19405.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0-preview8.19405.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-preview8.19405.4" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.0.0-preview8.19405.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ForumSquare.Shared\ForumSquare.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
